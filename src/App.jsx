@@ -250,7 +250,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/plan-trip",
+        "https://ai-tourist-planner-tbko.onrender.com/api/plan-trip",
         {
           method: "POST",
           headers: {
