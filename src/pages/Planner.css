@@ -1,0 +1,1118 @@
+/* =========================================================
+   AI TOURIST PLANNER - PLANNER PAGE
+   ========================================================= */
+
+.planner-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.planner-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.planner-header h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.planner-header p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.planner-form {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+
+  border: 1px solid #d5d5d5;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #222;
+
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   DAYS + BUDGET
+   ========================================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* =========================================================
+   INTEREST HELP
+   ========================================================= */
+
+.interest-help {
+  margin: 0 0 12px;
+  color: #777;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   INTERESTS GRID
+   ========================================================= */
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+
+/* =========================================================
+   INTEREST BUTTON
+   ========================================================= */
+
+.interest-option {
+  padding: 13px 15px;
+
+  background: #ffffff;
+  color: #333;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.interest-option:hover {
+  border-color: #2563eb;
+  background: #f5f8ff;
+}
+
+.interest-option.selected {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+
+/* =========================================================
+   SELECTED INTERESTS
+   ========================================================= */
+
+.selected-interests {
+  margin-top: 15px;
+  padding: 12px 14px;
+
+  background: #f5f7fb;
+  border-radius: 8px;
+
+  font-size: 14px;
+  color: #555;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error-message {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-bottom: 18px;
+  padding: 13px 15px;
+
+  background: #fff1f1;
+  color: #d32f2f;
+
+  border: 1px solid #ffcaca;
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   GENERATE BUTTON
+   ========================================================= */
+
+.generate-btn {
+  display: block;
+
+  width: 100%;
+  min-height: 52px;
+
+  padding: 14px 20px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.generate-btn:hover {
+  background: #1d4ed8;
+}
+
+.generate-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TRIP RESULT
+   IMPORTANT:
+   Do NOT use fixed height or max-height here.
+   ========================================================= */
+
+.trip-result {
+  width: 100%;
+  max-width: 1000px;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 40px auto 0;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
+
+  overflow: visible !important;
+}
+
+
+/* =========================================================
+   RESULT HEADER
+   ========================================================= */
+
+.result-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.result-header h2 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.result-header p {
+  margin: 0;
+
+  color: #666;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TRIP SUMMARY
+   ========================================================= */
+
+.trip-summary {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.trip-summary > div {
+  padding: 18px;
+
+  background: #f7f9fc;
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.trip-summary span {
+  display: block;
+
+  font-size: 25px;
+
+  margin-bottom: 8px;
+}
+
+.trip-summary strong {
+  display: block;
+
+  font-size: 14px;
+
+  margin-bottom: 6px;
+
+  color: #333;
+}
+
+.trip-summary p {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   RESULT INTERESTS
+   ========================================================= */
+
+.result-interests {
+  width: 100%;
+
+  margin-bottom: 25px;
+  padding: 15px 18px;
+
+  background: #f7f9fc;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   AI PLAN
+   IMPORTANT:
+   Allow the entire generated response to expand.
+   ========================================================= */
+
+.ai-plan {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin-top: 20px;
+
+  overflow: visible !important;
+
+  box-sizing: border-box;
+}
+
+.ai-plan h3 {
+  margin: 0 0 15px;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PLAN CONTENT
+   ========================================================= */
+
+.plan-content {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  padding: 22px;
+
+  background: #f8fafc;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  overflow: visible !important;
+
+  white-space: normal;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+
+  color: #333;
+}
+
+.plan-content p {
+  margin: 0 0 10px;
+
+  white-space: pre-wrap;
+
+  word-break: normal;
+}
+
+
+/* =========================================================
+   RESULT ACTIONS
+   THESE ARE AT THE VERY BOTTOM
+   ========================================================= */
+
+.result-actions {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 15px !important;
+
+  width: 100% !important;
+
+  margin-top: 35px !important;
+
+  margin-bottom: 10px !important;
+
+  padding: 0 !important;
+
+  box-sizing: border-box !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  overflow: visible !important;
+
+  position: relative !important;
+
+  z-index: 10 !important;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.download-btn {
+  display: block !important;
+
+  width: 100% !important;
+
+  max-width: 500px !important;
+
+  min-height: 52px !important;
+
+  padding: 14px 25px !important;
+
+  background: #2563eb !important;
+
+  color: #ffffff !important;
+
+  border: none !important;
+
+  border-radius: 10px !important;
+
+  font-size: 17px !important;
+
+  font-weight: 700 !important;
+
+  cursor: pointer !important;
+
+  text-align: center !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  position: relative !important;
+
+  z-index: 999 !important;
+
+  box-sizing: border-box !important;
+
+  transition: 0.2s ease !important;
+}
+
+.download-btn:hover {
+  background: #1d4ed8 !important;
+}
+
+
+/* =========================================================
+   PLAN ANOTHER TRIP BUTTON
+   ========================================================= */
+
+.plan-again-btn {
+  display: block !important;
+
+  width: 100% !important;
+
+  max-width: 500px !important;
+
+  min-height: 52px !important;
+
+  padding: 14px 25px !important;
+
+  background: #ffffff !important;
+
+  color: #2563eb !important;
+
+  border: 2px solid #2563eb !important;
+
+  border-radius: 10px !important;
+
+  font-size: 17px !important;
+
+  font-weight: 700 !important;
+
+  cursor: pointer !important;
+
+  text-align: center !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  position: relative !important;
+
+  z-index: 999 !important;
+
+  box-sizing: border-box !important;
+
+  transition: 0.2s ease !important;
+}
+
+.plan-again-btn:hover {
+  background: #eff6ff !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .planner-page {
+    padding: 30px 15px 60px;
+  }
+
+  .planner-header h1 {
+    font-size: 30px;
+  }
+
+  .planner-form {
+    padding: 25px;
+  }
+
+  .trip-result {
+    padding: 25px;
+  }
+
+  .trip-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .planner-page {
+    padding: 25px 12px 50px;
+  }
+
+  .planner-header h1 {
+    font-size: 25px;
+  }
+
+  .planner-header p {
+    font-size: 14px;
+  }
+
+  .planner-form {
+    padding: 20px 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trip-result {
+    padding: 20px 15px;
+  }
+
+  .trip-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .result-header h2 {
+    font-size: 24px;
+  }
+
+  .plan-content {
+    padding: 15px;
+
+    font-size: 14px;
+  }
+
+  .download-btn,
+  .plan-again-btn {
+    max-width: 100% !important;
+    font-size: 16px !important;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SAFETY
+   Prevent parent containers from clipping result/buttons
+   ========================================================= */
+
+.planner-page,
+.trip-result,
+.ai-plan,
+.plan-content,
+.result-actions {
+  overflow: visible !important;
+}
+
+.trip-result::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* ================================
+   RESULT ACTION BUTTONS
+================================ */
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 35px;
+  padding: 25px 0 10px;
+  width: 100%;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background: #16a34a;
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 15px 30px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  min-width: 210px;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  position: relative;
+  z-index: 10;
+
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+/* PLAN AGAIN BUTTON */
+
+.plan-again-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 15px 30px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  min-width: 210px;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  position: relative;
+  z-index: 10;
+
+  transition: 0.3s;
+}
+
+.plan-again-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+/* =========================================
+   CLEAN AI TRIP PLAN
+========================================= */
+
+.trip-plan {
+  width: 100%;
+  margin-top: 25px;
+  color: #173b63;
+  line-height: 1.7;
+}
+
+/* Main section heading */
+
+.plan-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 35px;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  background: #f4f8ff;
+  border-left: 5px solid #2563eb;
+  border-radius: 10px;
+}
+
+.plan-section-heading:first-child {
+  margin-top: 5px;
+}
+
+.plan-section-heading span {
+  font-size: 26px;
+}
+
+.plan-section-heading h3 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  color: #102a43;
+}
+
+/* Day heading */
+
+.day-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  background: #eef6ff;
+  border-radius: 9px;
+}
+
+.day-heading span {
+  font-size: 23px;
+}
+
+.day-heading h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #174a7e;
+}
+
+/* Morning / Afternoon / Evening */
+
+.time-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 12px 0;
+  padding: 15px 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(30, 64, 175, 0.05);
+}
+
+.time-emoji {
+  font-size: 22px;
+  min-width: 30px;
+}
+
+.time-item strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #1d4ed8;
+  font-size: 16px;
+}
+
+.time-item p {
+  margin: 0;
+  color: #334e68;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Normal text */
+
+.plan-text-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  padding-left: 8px;
+}
+
+.plan-text-item span {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+.plan-text-item p {
+  margin: 0;
+  color: #334e68;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Numbered list */
+
+.plan-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 10px 0;
+  padding: 11px 14px;
+  background: #f8fafc;
+  border-radius: 9px;
+}
+
+.list-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.plan-list-item p {
+  margin: 2px 0 0;
+  color: #334e68;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Budget */
+
+.budget-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 9px 0;
+  padding: 13px 16px;
+  background: #f8fafc;
+  border-radius: 9px;
+  border: 1px solid #e5e7eb;
+}
+
+.budget-item span {
+  font-size: 19px;
+}
+
+.budget-item p {
+  margin: 0;
+  color: #334e68;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Last budget item / total */
+
+.budget-item:last-child {
+  background: #eefbf3;
+  border-color: #bbf7d0;
+}
+
+.budget-item:last-child p {
+  font-weight: 700;
+  color: #166534;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .plan-section-heading {
+    padding: 12px 14px;
+  }
+
+  .plan-section-heading h3 {
+    font-size: 18px;
+  }
+
+  .day-heading h4 {
+    font-size: 16px;
+  }
+
+  .time-item {
+    padding: 12px;
+  }
+
+  .time-item p,
+  .plan-text-item p,
+  .plan-list-item p,
+  .budget-item p {
+    font-size: 14px;
+  }
+}
+/* =========================================================
+   ORGANIZED AI TRIP PLAN
+   ========================================================= */
+
+.trip-plan {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 8px 20px;
+  color: #17365d;
+  font-size: 17px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Every generated line */
+.trip-plan p {
+  margin: 0;
+  padding: 0;
+  min-height: 28px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ---------------------------------------------------------
+   SPACE BETWEEN DIFFERENT CONTENT BLOCKS
+   --------------------------------------------------------- */
+
+.trip-plan p:empty {
+  height: 14px;
+  min-height: 14px;
+}
+
+/* ---------------------------------------------------------
+   HEADINGS
+   --------------------------------------------------------- */
+
+/* Main numbered sections such as:
+   1. TRIP OVERVIEW
+   2. DAY-BY-DAY ITINERARY
+   3. TOP PLACES TO VISIT
+   4. FOOD TO TRY
+   5. TRAVEL TIPS
+   6. BEST TIME TO VISIT
+   7. BUDGET SUMMARY
+*/
+
+.trip-plan p:has(+ p) {
+  margin-bottom: 3px;
+}
+
+/* Give section headings more breathing room */
+.trip-plan p.section-heading {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   DAY HEADINGS
+   --------------------------------------------------------- */
+
+.trip-plan p.day-heading {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  padding: 9px 14px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* ---------------------------------------------------------
+   MORNING / AFTERNOON / EVENING CONTENT
+   --------------------------------------------------------- */
+
+.trip-plan p.time-item {
+  margin: 7px 0;
+  padding: 4px 10px 4px 16px;
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   NORMAL CONTENT
+   --------------------------------------------------------- */
+
+.trip-plan p.content-line {
+  margin: 6px 0;
+  padding-left: 12px;
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   SELECTED INTERESTS
+   --------------------------------------------------------- */
+
+.trip-plan p.interests-line {
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .trip-plan {
+    padding: 8px 4px 16px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .trip-plan p.section-heading {
+    margin-top: 22px;
+    margin-bottom: 9px;
+    padding: 8px 10px;
+    font-size: 18px;
+  }
+
+  .trip-plan p.day-heading {
+    margin-top: 19px;
+    margin-bottom: 8px;
+    padding: 7px 10px;
+    font-size: 17px;
+  }
+
+  .trip-plan p.time-item {
+    margin: 6px 0;
+    padding-left: 10px;
+  }
+
+  .trip-plan p.content-line {
+    margin: 5px 0;
+    padding-left: 8px;
+  }
+}
+.plan-space {
+  height: 18px;
+}
